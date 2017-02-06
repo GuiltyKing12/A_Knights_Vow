@@ -5,9 +5,45 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Background">
+      <sprite>sprites\spr_maple</sprite>
+      <sprite>sprites\spr_dead_tree</sprite>
+      <sprite>sprites\spr_aspen</sprite>
+      <sprite>sprites\spr_pine</sprite>
+      <sprite>sprites\spr_bush</sprite>
+      <sprite>sprites\spr_rock_2</sprite>
+      <sprite>sprites\spr_rock_3</sprite>
+      <sprite>sprites\spr_rock_1</sprite>
+    </sprites>
+    <sprites name="Floor">
+      <sprite>sprites\spr_grass</sprite>
+      <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_dirt</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Background">
+      <object>objects\obj_maple</object>
+      <object>objects\obj_aspen</object>
+      <object>objects\obj_dead_tree</object>
+      <object>objects\obi_pine</object>
+      <object>objects\obj_bush</object>
+      <object>objects\obj_rock_1</object>
+      <object>objects\obj_rock_2</object>
+      <object>objects\obj_rock_3</object>
+    </objects>
+    <objects name="Floor">
+      <object>objects\obj_grass</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_dirt</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room_serg_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
