@@ -21,29 +21,18 @@
       <sprite>sprites\spr_rock</sprite>
       <sprite>sprites\spr_dirt</sprite>
     </sprites>
+    <sprites name="Object">
+      <sprite>sprites\spr_knight</sprite>
+      <sprite>sprites\spr_sword</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <objects name="Background">
-      <object>objects\obj_maple</object>
-      <object>objects\obj_aspen</object>
-      <object>objects\obj_dead_tree</object>
-      <object>objects\obi_pine</object>
-      <object>objects\obj_bush</object>
-      <object>objects\obj_rock_1</object>
-      <object>objects\obj_rock_2</object>
-      <object>objects\obj_rock_3</object>
-    </objects>
-    <objects name="Floor">
-      <object>objects\obj_grass</object>
-      <object>objects\obj_rock</object>
-      <object>objects\obj_dirt</object>
-    </objects>
+    <objects name="Background"/>
+    <objects name="Floor"/>
   </objects>
-  <rooms name="rooms">
-    <room>rooms\room_serg_test</room>
-  </rooms>
+  <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
