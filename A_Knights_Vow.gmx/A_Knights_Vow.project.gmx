@@ -24,6 +24,9 @@
     <sprites name="Object">
       <sprite>sprites\spr_knight</sprite>
       <sprite>sprites\spr_sword</sprite>
+      <sprite>sprites\spr_dragon</sprite>
+      <sprite>sprites\spr_boar</sprite>
+      <sprite>sprites\spr_test_enemy</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
