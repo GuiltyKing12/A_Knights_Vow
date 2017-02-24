@@ -29,9 +29,30 @@
       <sprite>sprites\spr_test_enemy</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background_text</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
+  <objects name="objects">
+    <objects name="Background">
+      <object>objects\obj_maple</object>
+      <object>objects\obj_dead_tree</object>
+      <object>objects\obj_aspen</object>
+      <object>objects\obj_pine</object>
+      <object>objects\obj_bush</object>
+      <object>objects\obj_rock1</object>
+      <object>objects\obj_rock2</object>
+      <object>objects\obj_rock3</object>
+    </objects>
+    <objects name="Floor">
+      <object>objects\obj_grass</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_dirt</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
