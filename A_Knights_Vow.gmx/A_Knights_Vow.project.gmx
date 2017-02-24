@@ -31,11 +31,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects">
-    <objects name="Background"/>
-    <objects name="Floor"/>
-  </objects>
-  <rooms name="rooms"/>
+  <objects name="objects"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
