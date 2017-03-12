@@ -23,6 +23,7 @@
     </sprites>
     <sprites name="Object">
       <sprite>sprites\spr_knight</sprite>
+      <sprite>sprites\test_knight</sprite>
       <sprite>sprites\spr_sword</sprite>
       <sprite>sprites\spr_dragon</sprite>
       <sprite>sprites\spr_boar</sprite>
@@ -32,8 +33,17 @@
   <backgrounds name="background">
     <background>background\background_text</background>
     <background>background\background_1</background>
+    <background>background\background_tiles</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Knight_Test_Physics">
+      <script>scripts\Init_Knight.gml</script>
+      <script>scripts\proccess.gml</script>
+      <script>scripts\collision_map.gml</script>
+      <script>scripts\get_collison.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <objects name="Background">
       <object>objects\obj_maple</object>
@@ -50,9 +60,10 @@
       <object>objects\obj_rock</object>
       <object>objects\obj_dirt</object>
     </objects>
+    <object>objects\test_objects</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room_serg_test_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
