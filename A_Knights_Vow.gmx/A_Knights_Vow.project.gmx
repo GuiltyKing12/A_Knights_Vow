@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_calm</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Background">
       <sprite>sprites\spr_maple</sprite>
@@ -28,6 +30,12 @@
       <sprite>sprites\spr_dragon</sprite>
       <sprite>sprites\spr_boar</sprite>
       <sprite>sprites\spr_test_enemy</sprite>
+      <sprites name="Knight">
+        <sprite>sprites\spr_knight_left</sprite>
+        <sprite>sprites\spr_knight_right</sprite>
+        <sprite>sprites\spr_knight_jump_right</sprite>
+        <sprite>sprites\spr_knight_jump_left</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
