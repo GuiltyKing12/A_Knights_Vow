@@ -38,6 +38,7 @@
       </sprites>
       <sprites name="Boar">
         <sprite>sprites\spr_boar_left</sprite>
+        <sprite>sprites\spr_boar_right</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -53,6 +54,10 @@
       <script>scripts\proccess.gml</script>
       <script>scripts\collision_map.gml</script>
       <script>scripts\get_collison.gml</script>
+    </scripts>
+    <scripts name="Boar_Physics">
+      <script>scripts\Init_Boar.gml</script>
+      <script>scripts\process_boar.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

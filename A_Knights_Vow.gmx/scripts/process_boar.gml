@@ -1,5 +1,5 @@
 var xx,yy,c1,c2;
-walk_speed = .3;
+walk_speed = .6;
 
 // Apply gravity (and jumping)
 y = y+grav;
@@ -11,11 +11,11 @@ if( grav<0 )
 {
     if( jump ){
         if( dir=1){ //right
-            sprite_index = spr_knight_jump_right;
+            sprite_index = spr_boar_right;
             image_index = 3;
             image_speed = 0;
         }else{
-            sprite_index = spr_knight_jump_left;
+            sprite_index = spr_boar_left;
             image_index = 3;
             image_speed = 0;
         }
@@ -23,7 +23,7 @@ if( grav<0 )
     
     // Check if the ground has been reached
     c2 = -1;
-    c1 = get_collison(x,y+64);
+    c1 = get_collison(x,y);
     if( (x&$1f)>0 ) {
         c2=get_collison(x+32,y);
     }
@@ -31,7 +31,7 @@ if( grav<0 )
     {
         grav=0; // Stop from falling
         jump = 0;
-        y = (y&$ffffffe0)+64;
+        y = (y&$ffffffe0)+32;
     }
 }
 else{ // Otherwise, check collision above player
@@ -53,9 +53,9 @@ else{ // Otherwise, check collision above player
         jump=0;
         
         if( dir=1){
-            sprite_index = spr_knight_right;
+            sprite_index = spr_boar_right;
         }else{
-            sprite_index = spr_knight_left;
+            sprite_index = spr_boar_left;
         }           
     }
 }
@@ -66,10 +66,10 @@ if( keyboard_check(vk_left) )
 {
     dir=-1;
     if(!jump){
-        sprite_index = spr_knight_left;
+        sprite_index = spr_boar_left;
         image_speed = walk_speed;
     }else{
-        sprite_index = spr_knight_jump_left;
+        sprite_index = spr_boar_left;
         image_index = 3;
         image_speed = 0;
     }
@@ -88,10 +88,10 @@ if( keyboard_check(vk_left) )
     // Otherwise, check collision to the right
     dir=1;
     if(!jump){
-        sprite_index = spr_knight_right;
+        sprite_index = spr_boar_right;
         image_speed = walk_speed;
     }else{
-        sprite_index = spr_knight_jump_right;
+        sprite_index = spr_boar_right;
         image_index = 3;
         image_speed = 0;
     }
