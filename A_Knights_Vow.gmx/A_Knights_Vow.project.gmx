@@ -42,6 +42,10 @@
     </sprites>
     <sprites name="System">
       <sprite>sprites\spr_collision</sprite>
+      <sprite>sprites\spr_play_button</sprite>
+      <sprite>sprites\spr_exit_button</sprite>
+      <sprite>sprites\spr_dialogue_box</sprite>
+      <sprite>sprites\spr_title</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -50,6 +54,9 @@
     <background>background\bg_dirt</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_initialize.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="Background">
       <object>objects\obj_maple</object>
@@ -68,6 +75,10 @@
     </objects>
     <objects name="system">
       <object>objects\obj_collision_block</object>
+      <object>objects\obj_play_button</object>
+      <object>objects\obj_exit_button</object>
+      <object>objects\obj_dialogue_box</object>
+      <object>objects\obj_title</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_knight</object>
@@ -75,6 +86,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_prologue</room>
     <room>rooms\rm_test_2</room>
   </rooms>
   <help>
