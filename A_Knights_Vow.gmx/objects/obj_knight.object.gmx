@@ -28,6 +28,8 @@
             <string>start_x = x
 start_y = y
 
+combo = 0;
+
 phy_fixed_rotation = true
 
 move_speed = 70
@@ -35,6 +37,57 @@ max_x_speed = 3
 
 jumping = false
 jump_force = -95
+
+attacking = false;
+nexthit = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>nexthit = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attacking = false;
+nexthit =false;
+combo = 0;
 </string>
           </argument>
         </arguments>
@@ -64,14 +117,17 @@ jump_force = -95
 }
 else */
 
-if(phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
-  sprite_index = spr_knight_right
-}
-else{
-  sprite_index = spr_knight
-}
+if(!attacking) {
+    if(phy_speed_x &gt; 0.1 || phy_speed_x &lt; -0.1){
+        sprite_index = spr_knight_right
+    }
+    else{
+        sprite_index = spr_knight
+    }
 
-image_speed = phy_speed_x/ 10;
+
+    image_speed = phy_speed_x/ 10;
+}
 </string>
           </argument>
         </arguments>
@@ -172,6 +228,53 @@ phy_position_y = start_y;
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(combo == 2 &amp;&amp; nexthit) {
+    combo++;
+    nexthit = false;
+    sprite_index = spr_knight_slash_three;
+    image_speed = .21;
+    alarm[0] = .6 * room_speed;
+}
+
+if(combo == 1 &amp;&amp; nexthit) {
+    combo++;
+    nexthit = false;
+    sprite_index = spr_knight_slash_two;
+    image_speed = .5;
+    alarm[1] = .2 * room_speed;
+    alarm[0] = .4 * room_speed;
+}
+
+if(!attacking) {
+    combo++;
+    sprite_index = spr_knight_slash_one_right;
+    attacking = true;
+    image_speed = .5;
+    alarm[1] = .2 * room_speed;
+    alarm[0] = .4 * room_speed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
@@ -193,7 +296,6 @@ phy_position_y = start_y;
 if(place_meeting(x, y+1, obj_collision_block   )){
   jumping = true
   physics_apply_impulse(x,y,0,jump_force)
-  
 }
 
 </string>

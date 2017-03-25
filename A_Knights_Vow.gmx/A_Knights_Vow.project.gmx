@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_calm</sound>
+    <sound>sound\snd_scary_title_menu</sound>
+    <sound>sound\snd_level_one</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">
@@ -34,6 +36,10 @@
         <sprite>sprites\spr_knight_right</sprite>
         <sprite>sprites\spr_knight_jump_right</sprite>
         <sprite>sprites\spr_knight_jump_left</sprite>
+        <sprite>sprites\spr_knight_slash_one_right</sprite>
+        <sprite>sprites\spr_knight_slash_one_left</sprite>
+        <sprite>sprites\spr_knight_slash_two</sprite>
+        <sprite>sprites\spr_knight_slash_three</sprite>
       </sprites>
       <sprites name="Boar">
         <sprite>sprites\spr_boar_left</sprite>
