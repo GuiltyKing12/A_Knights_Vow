@@ -25,7 +25,6 @@
     </sprites>
     <sprites name="Object">
       <sprite>sprites\spr_knight</sprite>
-      <sprite>sprites\test_knight</sprite>
       <sprite>sprites\spr_sword</sprite>
       <sprite>sprites\spr_dragon</sprite>
       <sprite>sprites\spr_boar</sprite>
@@ -41,25 +40,16 @@
         <sprite>sprites\spr_boar_right</sprite>
       </sprites>
     </sprites>
+    <sprites name="System">
+      <sprite>sprites\spr_collision</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background_text</background>
     <background>background\background_1</background>
-    <background>background\background_tiles</background>
+    <background>background\bg_dirt</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts">
-    <scripts name="Knight_Test_Physics">
-      <script>scripts\Init_Knight.gml</script>
-      <script>scripts\proccess.gml</script>
-      <script>scripts\collision_map.gml</script>
-      <script>scripts\get_collison.gml</script>
-    </scripts>
-    <scripts name="Boar_Physics">
-      <script>scripts\Init_Boar.gml</script>
-      <script>scripts\process_boar.gml</script>
-    </scripts>
-  </scripts>
   <objects name="objects">
     <objects name="Background">
       <object>objects\obj_maple</object>
@@ -76,11 +66,16 @@
       <object>objects\obj_rock</object>
       <object>objects\obj_dirt</object>
     </objects>
-    <object>objects\test_objects</object>
-    <object>objects\obj_boar</object>
+    <objects name="system">
+      <object>objects\obj_collision_block</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_knight</object>
+      <object>objects\obj_boar</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_serg_test_1</room>
+    <room>rooms\rm_test_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
