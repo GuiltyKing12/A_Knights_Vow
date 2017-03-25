@@ -10,6 +10,7 @@
     <sound>sound\snd_level_one</sound>
     <sound>sound\snd_sword_slash</sound>
     <sound>sound\snd_pig_scream</sound>
+    <sound>sound\snd_knight_death</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">
@@ -42,6 +43,8 @@
         <sprite>sprites\spr_knight_slash_one_left</sprite>
         <sprite>sprites\spr_knight_slash_two</sprite>
         <sprite>sprites\spr_knight_slash_three</sprite>
+        <sprite>sprites\spr_knight_defend</sprite>
+        <sprite>sprites\spr_knight_dead</sprite>
       </sprites>
       <sprites name="Boar">
         <sprite>sprites\spr_boar_left</sprite>
@@ -55,12 +58,18 @@
       <sprite>sprites\spr_dialogue_box</sprite>
       <sprite>sprites\spr_title</sprite>
       <sprite>sprites\spr_hitpoint</sprite>
+      <sprite>sprites\spr_guide</sprite>
+      <sprite>sprites\spr_controls_button</sprite>
+      <sprite>sprites\spr_back_button</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background_text</background>
     <background>background\background_1</background>
     <background>background\bg_dirt</background>
+    <background>background\background_guide</background>
+    <background>background\background_end</background>
+    <background>background\background_gameover</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -88,16 +97,24 @@
       <object>objects\obj_exit_button</object>
       <object>objects\obj_dialogue_box</object>
       <object>objects\obj_title</object>
+      <object>objects\obj_guide_button</object>
+      <object>objects\obj_back_button</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_knight</object>
       <object>objects\obj_boar</object>
+      <object>objects\obj_dead_knight</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_prologue</room>
-    <room>rooms\rm_test_2</room>
+    <room>rooms\rm_level1_1</room>
+    <room>rooms\rm_level1_2</room>
+    <room>rooms\rm_level1_3</room>
+    <room>rooms\rm_end</room>
+    <room>rooms\rm_guide</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
