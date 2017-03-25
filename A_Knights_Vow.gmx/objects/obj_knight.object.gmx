@@ -247,6 +247,7 @@ phy_position_y = start_y;
             <kind>1</kind>
             <string>if(combo == 2 &amp;&amp; nexthit) {
     combo++;
+    audio_play_sound(snd_sword_slash, 9, false);
     nexthit = false;
     sprite_index = spr_knight_slash_three;
     image_speed = .21;
@@ -255,6 +256,7 @@ phy_position_y = start_y;
 
 if(combo == 1 &amp;&amp; nexthit) {
     combo++;
+    audio_play_sound(snd_sword_slash, 9, false);
     nexthit = false;
     sprite_index = spr_knight_slash_two;
     image_speed = .5;
@@ -264,6 +266,7 @@ if(combo == 1 &amp;&amp; nexthit) {
 
 if(!attacking) {
     combo++;
+    audio_play_sound(snd_sword_slash, 9, false);
     sprite_index = spr_knight_slash_one_right;
     attacking = true;
     image_speed = .5;

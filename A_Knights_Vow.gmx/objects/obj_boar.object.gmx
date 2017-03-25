@@ -26,9 +26,32 @@
           <argument>
             <kind>1</kind>
             <string>phy_fixed_rotation = true
-
+scream = true;
 move_speed = 100
 max_x_speed = 4
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scream = true;
 </string>
           </argument>
         </arguments>
@@ -64,6 +87,12 @@ else{
   //left
   sprite_index = spr_boar_right;
   physics_apply_force(x,y, move_speed, 0)
+}
+
+if(scream){
+    scream = false;
+    audio_play_sound(snd_pig_scream, 9, false);
+    alarm[0] = 10 * room_speed;
 }
 
 

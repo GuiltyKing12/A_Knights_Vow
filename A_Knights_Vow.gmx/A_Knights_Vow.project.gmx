@@ -8,6 +8,8 @@
     <sound>sound\snd_calm</sound>
     <sound>sound\snd_scary_title_menu</sound>
     <sound>sound\snd_level_one</sound>
+    <sound>sound\snd_sword_slash</sound>
+    <sound>sound\snd_pig_scream</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">
