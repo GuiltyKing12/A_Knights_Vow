@@ -219,6 +219,16 @@ if(!attacking &amp;&amp; !defending) {
     hitpoints--;
     invincible = true;
     alarm[2] = 1 * room_speed;
+    
+    with(other){
+      if(sprite_index == spr_boar_right){
+        physics_apply_impulse(x,y, -250,0)
+      }
+      else{
+        physics_apply_impulse(x,y, 250,0)
+      }
+    }
+    
 }
 </string>
           </argument>
@@ -290,7 +300,7 @@ sprite_index = spr_knight_defend;
           <argument>
             <kind>1</kind>
             <string>image_xscale = 1
-if(!defending) physics_apply_force(x,y, move_speed, 0)
+if(!defending || !attacking) physics_apply_force(x,y, move_speed, 0)
 </string>
           </argument>
         </arguments>
@@ -314,7 +324,7 @@ if(!defending) physics_apply_force(x,y, move_speed, 0)
           <argument>
             <kind>1</kind>
             <string>image_xscale = -1
-if(!defending) physics_apply_force(x,y, -move_speed, 0)
+if(!defending || !attacking) physics_apply_force(x,y, -move_speed, 0)
 </string>
           </argument>
         </arguments>
@@ -466,7 +476,8 @@ if(place_meeting(x, y+1, obj_collision_block   )){
           <argument>
             <kind>1</kind>
             <string>defending = false;
-
+invincible = true;
+alarm[2] = .5 * room_speed;
 </string>
           </argument>
         </arguments>
