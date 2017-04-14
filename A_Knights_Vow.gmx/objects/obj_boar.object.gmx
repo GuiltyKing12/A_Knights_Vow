@@ -36,6 +36,29 @@ invincible = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_knight.holyenergy += 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -104,6 +127,10 @@ invincible = false;
     instance_destroy();
 }
 
+with(obj_holy_slash) {
+    if(x == other.x) instance_destroy();
+}
+
 //Stuff
 phy_speed_x = max(min(phy_speed_x, max_x_speed), -max_x_speed)
 image_speed = phy_speed_x /10;
@@ -131,6 +158,29 @@ if(scream){
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_holy_slash">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_knight">
       <action>
         <libid>1</libid>
@@ -148,7 +198,10 @@ if(scream){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_knight.attacking) hitpoints--;
+            <string>if(obj_knight.attacking) {
+    hitpoints--;
+    obj_knight.holyenergy += 5;
+}
 </string>
           </argument>
         </arguments>

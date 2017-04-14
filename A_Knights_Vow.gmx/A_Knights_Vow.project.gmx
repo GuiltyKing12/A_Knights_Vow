@@ -45,6 +45,7 @@
         <sprite>sprites\spr_knight_slash_three</sprite>
         <sprite>sprites\spr_knight_defend</sprite>
         <sprite>sprites\spr_knight_dead</sprite>
+        <sprite>sprites\spr_holy_slash</sprite>
       </sprites>
       <sprites name="Boar">
         <sprite>sprites\spr_boar_left</sprite>
@@ -71,6 +72,7 @@
       <sprite>sprites\spr_guide</sprite>
       <sprite>sprites\spr_controls_button</sprite>
       <sprite>sprites\spr_back_button</sprite>
+      <sprite>sprites\spr_holyenergy</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -116,6 +118,7 @@
       <object>objects\obj_dead_knight</object>
       <object>objects\obj_bandit</object>
       <object>objects\obj_tentacle_monster</object>
+      <object>objects\obj_holy_slash</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -124,6 +127,8 @@
     <room>rooms\rm_level1_1</room>
     <room>rooms\rm_level1_2</room>
     <room>rooms\rm_level1_3</room>
+    <room>rooms\rm_level_two_prologue</room>
+    <room>rooms\rm_level2_1</room>
     <room>rooms\rm_end</room>
     <room>rooms\rm_guide</room>
     <room>rooms\rm_game_over</room>

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>start_x = x
 start_y = y
+right = true;
 
 combo = 0;
 
@@ -42,6 +43,7 @@ attacking = false;
 nexthit = false;
 defending = false;
 hitpoints = global.knight_hitpoints;
+holyenergy = global.knight_holyenergy;
 invincible = false;
 </string>
           </argument>
@@ -179,7 +181,8 @@ if(hitpoints == 0) {
 if(x &lt; 0) x = 0;
 if(x &gt; room_width) {
     room_goto_next();
-    global.knight_hitpoints = hitpoints;   
+    global.knight_hitpoints = hitpoints; 
+    global.knight_holyenergy = holyenergy;  
 }
 
 if(!attacking &amp;&amp; !defending) {
@@ -187,11 +190,53 @@ if(!attacking &amp;&amp; !defending) {
         sprite_index = spr_knight_right
     }
     else{
-        sprite_index = spr_knight
+        image_speed = 0;
+        image_index = 0;
+        sprite_index = spr_knight_right
     }
 
 
     image_speed = phy_speed_x/ 10;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bandit">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
+    with(other) {
+            if(attack) {
+            other.hitpoints--;
+            other.invincible = true;
+            other.alarm[2] = 1 * room_speed;
+        }
+    }
+}
+
+if(defending){
+  if(image_xscale &gt; 0){
+    physics_apply_force(x,y, 100, 0)
+  }
+  else{
+    physics_apply_force(x,y, -100, 0)
+  }
 }
 </string>
           </argument>
@@ -309,6 +354,7 @@ sprite_index = spr_knight_defend;
           <argument>
             <kind>1</kind>
             <string>image_xscale = 1
+right = true;
 if(!defending || !attacking) physics_apply_force(x,y, move_speed, 0)
 </string>
           </argument>
@@ -333,6 +379,7 @@ if(!defending || !attacking) physics_apply_force(x,y, move_speed, 0)
           <argument>
             <kind>1</kind>
             <string>image_xscale = -1
+right = false;
 if(!defending || !attacking) physics_apply_force(x,y, -move_speed, 0)
 </string>
           </argument>
@@ -384,6 +431,74 @@ phy_position_y = start_y;
 for(i = 0; i &lt; hitpoints; i++) {
     draw_sprite(spr_hitpoint, -1, (x - 32) + i * 16, y - 35);
 }
+
+
+if(holyenergy &gt; 100) holyenergy = 100;
+energybar = floor(holyenergy / 20);
+
+for(k = 0; k &lt; energybar; k++) {
+    draw_sprite(spr_holyenergy, -1, (x - 32) + k * 16, y - 55);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!attacking &amp;&amp; !defending &amp;&amp; holyenergy &gt;= 100) {
+holyenergy = 0;
+knightslash = instance_create(x, y, obj_holy_slash);
+audio_play_sound(snd_sword_slash, 9, false);
+    sprite_index = spr_knight_slash_one_right;
+    attacking = true;
+    alarm[1] = .2 * room_speed;
+    alarm[0] = .4 * room_speed;
+
+with(knightslash) {
+    if(other.right) movespeed = 1;
+    else movespeed = -1;
+    image_xscale = movespeed;
+}
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="78">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto_next();
 </string>
           </argument>
         </arguments>
