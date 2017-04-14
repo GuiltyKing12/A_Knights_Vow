@@ -230,6 +230,15 @@ if(!attacking &amp;&amp; !defending) {
     }
     
 }
+
+if(defending){
+  if(image_xscale &gt; 0){
+    physics_apply_force(x,y, 100, 0)
+  }
+  else{
+    physics_apply_force(x,y, -100, 0)
+  }
+}
 </string>
           </argument>
         </arguments>
