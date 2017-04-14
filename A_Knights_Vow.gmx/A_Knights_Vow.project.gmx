@@ -50,6 +50,16 @@
         <sprite>sprites\spr_boar_left</sprite>
         <sprite>sprites\spr_boar_right</sprite>
       </sprites>
+      <sprites name="Bandit">
+        <sprite>sprites\spr_bandit_stand</sprite>
+        <sprite>sprites\spr_bandit_move</sprite>
+        <sprite>sprites\spr_bandit_attack</sprite>
+      </sprites>
+      <sprites name="TentacleMonster">
+        <sprite>sprites\spr_tentacle_stand</sprite>
+        <sprite>sprites\spr_tentacle_attack</sprite>
+        <sprite>sprites\spr_tentacle_walk</sprite>
+      </sprites>
     </sprites>
     <sprites name="System">
       <sprite>sprites\spr_collision</sprite>
@@ -104,6 +114,8 @@
       <object>objects\obj_knight</object>
       <object>objects\obj_boar</object>
       <object>objects\obj_dead_knight</object>
+      <object>objects\obj_bandit</object>
+      <object>objects\obj_tentacle_monster</object>
     </objects>
   </objects>
   <rooms name="rooms">
