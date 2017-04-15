@@ -38,6 +38,11 @@ else if(room = rm_level_two_prologue) {
         dialogue[i] = global.level2[i];
     }
 }
+else if(room = rm_level_three_prologue) {
+    for(i = array_length_1d(global.level2) - 1; i &gt; -1; i--) {
+        dialogue[i] = global.level3[i];
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -89,6 +89,9 @@
     <background>background\background_end</background>
     <background>background\background_gameover</background>
     <background>background\background_prologue</background>
+    <background>background\background_village_burning</background>
+    <background>background\background_castle</background>
+    <background>background\background_prologue_two</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -140,6 +143,12 @@
     <room>rooms\rm_level1_3</room>
     <room>rooms\rm_level_two_prologue</room>
     <room>rooms\rm_level2_1</room>
+    <room>rooms\rm_level2_2</room>
+    <room>rooms\rm_level2_3</room>
+    <room>rooms\rm_level_three_prologue</room>
+    <room>rooms\rm_level3_1</room>
+    <room>rooms\rm_level3_2</room>
+    <room>rooms\rm_level3_3</room>
     <room>rooms\rm_end</room>
     <room>rooms\rm_guide</room>
     <room>rooms\rm_game_over</room>
