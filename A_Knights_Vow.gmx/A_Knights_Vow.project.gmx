@@ -13,6 +13,7 @@
     <sound>sound\snd_knight_death</sound>
     <sound>sound\snd_bandit_attack</sound>
     <sound>sound\snd_holy_sword</sound>
+    <sound>sound\snd_tentacle</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">
@@ -58,6 +59,7 @@
         <sprite>sprites\spr_bandit_move</sprite>
         <sprite>sprites\spr_bandit_attack</sprite>
         <sprite>sprites\spr_bandit_archer</sprite>
+        <sprite>sprites\spr_bolt</sprite>
       </sprites>
       <sprites name="TentacleMonster">
         <sprite>sprites\spr_tentacle_stand</sprite>
@@ -86,6 +88,7 @@
     <background>background\background_guide</background>
     <background>background\background_end</background>
     <background>background\background_gameover</background>
+    <background>background\background_prologue</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -122,8 +125,10 @@
       <object>objects\obj_boar</object>
       <object>objects\obj_dead_knight</object>
       <object>objects\obj_bandit</object>
+      <object>objects\obj_bandit_archer</object>
       <object>objects\obj_tentacle_monster</object>
       <object>objects\obj_holy_slash</object>
+      <object>objects\obj_bolt</object>
       <object>objects\obj_tentacle_blast</object>
     </objects>
   </objects>
