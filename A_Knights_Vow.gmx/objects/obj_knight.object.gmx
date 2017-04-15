@@ -504,7 +504,7 @@ for(k = 0; k &lt; energybar; k++) {
             <string>if(!attacking &amp;&amp; !defending &amp;&amp; holyenergy &gt;= 100) {
 holyenergy = 0;
 knightslash = instance_create(x, y, obj_holy_slash);
-audio_play_sound(snd_sword_slash, 9, false);
+audio_play_sound(snd_holy_sword, 9, false);
     sprite_index = spr_knight_slash_one_right;
     attacking = true;
     alarm[1] = .2 * room_speed;

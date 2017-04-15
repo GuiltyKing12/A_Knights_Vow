@@ -147,7 +147,7 @@ attack = false;
           <argument>
             <kind>1</kind>
             <string>if(hitpoints == 0) {
-    audio_play_sound(snd_pig_scream, 9, false);
+    audio_play_sound(snd_bandit_attack, 9, false);
     instance_destroy();
 }
 
@@ -180,12 +180,13 @@ if(abs(obj_knight.x - x) &lt; 32 &amp;&amp; !attack) {
     attack = true;
     image_speed = .2;
     sprite_index = spr_bandit_attack;
+    audio_play_sound(snd_bandit_attack, 9, false);
     alarm[2] = .2 * room_speed;
 }
 
 if(scream){
     scream = false;
-    audio_play_sound(snd_pig_scream, 9, false);
+    audio_play_sound(snd_bandit_attack, 9, false);
     alarm[0] = 10 * room_speed;
 }
 

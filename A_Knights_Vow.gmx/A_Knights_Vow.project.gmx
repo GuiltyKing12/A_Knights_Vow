@@ -11,6 +11,8 @@
     <sound>sound\snd_sword_slash</sound>
     <sound>sound\snd_pig_scream</sound>
     <sound>sound\snd_knight_death</sound>
+    <sound>sound\snd_bandit_attack</sound>
+    <sound>sound\snd_holy_sword</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">
@@ -55,6 +57,7 @@
         <sprite>sprites\spr_bandit_stand</sprite>
         <sprite>sprites\spr_bandit_move</sprite>
         <sprite>sprites\spr_bandit_attack</sprite>
+        <sprite>sprites\spr_bandit_archer</sprite>
       </sprites>
       <sprites name="TentacleMonster">
         <sprite>sprites\spr_tentacle_stand</sprite>
