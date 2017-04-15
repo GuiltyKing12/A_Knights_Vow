@@ -29,7 +29,7 @@
 scream = true;
 move_speed = 100
 max_x_speed = 4
-hitpoints = 2;
+hitpoints = 1;
 invincible = false;
 attack = false;
 </string>

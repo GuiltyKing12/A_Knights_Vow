@@ -60,6 +60,7 @@
         <sprite>sprites\spr_tentacle_stand</sprite>
         <sprite>sprites\spr_tentacle_attack</sprite>
         <sprite>sprites\spr_tentacle_walk</sprite>
+        <sprite>sprites\spr_tentacle_blast</sprite>
       </sprites>
     </sprites>
     <sprites name="System">
@@ -86,6 +87,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_initialize.gml</script>
+    <script>scripts\scr_tentacle_attack.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Background">
@@ -119,6 +121,7 @@
       <object>objects\obj_bandit</object>
       <object>objects\obj_tentacle_monster</object>
       <object>objects\obj_holy_slash</object>
+      <object>objects\obj_tentacle_blast</object>
     </objects>
   </objects>
   <rooms name="rooms">

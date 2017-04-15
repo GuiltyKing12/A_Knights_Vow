@@ -203,6 +203,46 @@ if(!attacking &amp;&amp; !defending) {
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_tentacle_monster">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
+    with(other) {
+            if(attack) {
+            other.hitpoints--;
+            other.invincible = true;
+            other.alarm[2] = 1 * room_speed;
+        }
+    }
+}
+
+if(defending){
+  if(image_xscale &gt; 0){
+    physics_apply_force(x,y, 100, 0)
+  }
+  else{
+    physics_apply_force(x,y, -100, 0)
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_bandit">
       <action>
         <libid>1</libid>
