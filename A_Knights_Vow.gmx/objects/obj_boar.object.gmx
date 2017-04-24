@@ -29,7 +29,7 @@
 scream = true;
 move_speed = 100
 max_x_speed = 4
-hitpoints = 2;
+hitpoints = 5;
 invincible = false;
 </string>
           </argument>
@@ -54,6 +54,7 @@ invincible = false;
           <argument>
             <kind>1</kind>
             <string>obj_knight.holyenergy += 10;
+if(random(10) &lt;= 6) instance_create(x, y, obj_heart);
 </string>
           </argument>
         </arguments>
@@ -152,6 +153,10 @@ if(scream){
     alarm[0] = 10 * room_speed;
 }
 
+if(obj_knight.attacking) {
+    scr_knight_attack();
+}
+
 
 </string>
           </argument>
@@ -198,11 +203,7 @@ if(scream){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_knight.attacking) {
-    hitpoints--;
-    obj_knight.holyenergy += 5;
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -244,8 +245,8 @@ if(scream){
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>56,0</point>
-    <point>56,32</point>
+    <point>64,0</point>
+    <point>64,32</point>
     <point>0,32</point>
   </PhysicsShapePoints>
 </object>

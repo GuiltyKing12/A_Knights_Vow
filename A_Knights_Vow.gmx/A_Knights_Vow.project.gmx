@@ -67,6 +67,16 @@
         <sprite>sprites\spr_tentacle_walk</sprite>
         <sprite>sprites\spr_tentacle_blast</sprite>
       </sprites>
+      <sprites name="Red King">
+        <sprite>sprites\spr_red_king</sprite>
+        <sprite>sprites\spr_portal</sprite>
+        <sprite>sprites\spr_dark_ball</sprite>
+        <sprite>sprites\spr_dark_sword</sprite>
+      </sprites>
+      <sprites name="EyeOfAgora">
+        <sprite>sprites\spr_eye_of_agora</sprite>
+        <sprite>sprites\spr_death_ball</sprite>
+      </sprites>
     </sprites>
     <sprites name="System">
       <sprite>sprites\spr_collision</sprite>
@@ -79,6 +89,7 @@
       <sprite>sprites\spr_controls_button</sprite>
       <sprite>sprites\spr_back_button</sprite>
       <sprite>sprites\spr_holyenergy</sprite>
+      <sprite>sprites\spr_dialogue_choice</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -92,11 +103,15 @@
     <background>background\background_village_burning</background>
     <background>background\background_castle</background>
     <background>background\background_prologue_two</background>
+    <background>background\background_the_end</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_initialize.gml</script>
     <script>scripts\scr_tentacle_attack.gml</script>
+    <script>scripts\scr_knight_attack.gml</script>
+    <script>scripts\scr_get_heart.gml</script>
+    <script>scripts\scr_bandit_attack.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Background">
@@ -122,6 +137,7 @@
       <object>objects\obj_title</object>
       <object>objects\obj_guide_button</object>
       <object>objects\obj_back_button</object>
+      <object>objects\obj_dialogue_choice</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_knight</object>
@@ -133,6 +149,14 @@
       <object>objects\obj_holy_slash</object>
       <object>objects\obj_bolt</object>
       <object>objects\obj_tentacle_blast</object>
+      <object>objects\obj_heart</object>
+      <object>objects\obj_red_king</object>
+      <object>objects\obj_knight_bolt</object>
+      <object>objects\obj_portal</object>
+      <object>objects\obj_dark_ball2</object>
+      <object>objects\obj_dark_ball</object>
+      <object>objects\obj_dark_sword</object>
+      <object>objects\obj_eye_of_agora</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -145,11 +169,17 @@
     <room>rooms\rm_level2_1</room>
     <room>rooms\rm_level2_2</room>
     <room>rooms\rm_level2_3</room>
+    <room>rooms\rm_level_2_epilogue</room>
     <room>rooms\rm_level_three_prologue</room>
     <room>rooms\rm_level3_1</room>
     <room>rooms\rm_level3_2</room>
     <room>rooms\rm_level3_3</room>
+    <room>rooms\rm_level_3_epilogue</room>
+    <room>rooms\rm_level_final</room>
     <room>rooms\rm_end</room>
+    <room>rooms\rm_ending_1</room>
+    <room>rooms\rm_ending_2</room>
+    <room>rooms\rm_ending_3</room>
     <room>rooms\rm_guide</room>
     <room>rooms\rm_game_over</room>
   </rooms>

@@ -29,7 +29,7 @@
 scream = true;
 move_speed = 100
 max_x_speed = 4
-hitpoints = 2;
+hitpoints = 5;
 invincible = false;
 attack = false;
 canattack = true;
@@ -58,6 +58,7 @@ right = false;
           <argument>
             <kind>1</kind>
             <string>obj_knight.holyenergy += 10;
+if(random(10) &lt;= 6) instance_create(x, y, obj_heart);
 </string>
           </argument>
         </arguments>
@@ -228,21 +229,26 @@ if(!fired) {
 }
 else {
     if(!attack) {
-        if(obj_knight.x &lt; x){
-          //right
-          image_xscale = 1;
-          sprite_index = spr_tentacle_walk;
-          image_speed = .2;
-          physics_apply_force(x,y, -move_speed, 0);
-          right = true;
+        if(obj_knight.x &lt; x) {
+            image_xscale = 1;
+            image_speed = .2;
+            right = true;
         }
-        else{
-          //left
-          image_xscale = -1;
+        else if(obj_knight.x &gt; x) {
+            image_xscale = -1;
+            image_speed = .2;
+            right = false;
+        }
+        
+        if(obj_knight.x + 120 &lt; x){
+          //right
           sprite_index = spr_tentacle_walk;
-          image_speed = .2;
+          physics_apply_force(x,y, -move_speed, 0);
+        }
+        else if(obj_knight.x - 120 &gt; x){
+          //left
+          sprite_index = spr_tentacle_walk;
           physics_apply_force(x,y, move_speed, 0);
-          right = false;
         }
     }
     
@@ -263,6 +269,9 @@ else {
     }
 }
 
+if(obj_knight.attacking) {
+    scr_knight_attack();
+}
 </string>
           </argument>
         </arguments>
@@ -308,11 +317,7 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_knight.attacking) {
-    hitpoints--;
-    obj_knight.holyenergy += 5;
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

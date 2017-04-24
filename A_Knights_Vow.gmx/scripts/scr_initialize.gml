@@ -10,5 +10,18 @@ global.level3[1] = "Finally he reaches the castle. He has felt that it has been 
 global.level3[2] = "However, he knows something is wrong and opening the doors he knows why. Monstosities are everywhere inside."
 global.level3[3] = "Driven he marches in unshaken and begins to cut them down."
 
+global.choice1[0] = "The bandit lord lays at your feet... What should you do with him?"
+global.choice1[1] = "Kill the bandit lord."
+global.choice1[2] = "Spare the bandit lord."
+
+global.choice2[0] = "The king stares back at you... his eyes are cold... What should you do?"
+global.choice2[1] = "Kill the king."
+global.choice2[2] = "Spare the king."
+
+global.choice_1_chose = 0;
+global.choice_2_chose = 0;
+
 global.knight_hitpoints = 5;
 global.knight_holyenergy = 0;
+
+randomize();
