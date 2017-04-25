@@ -17,6 +17,7 @@
     <sound>sound\snd_tentacle</sound>
     <sound>sound\snd_agora_eye</sound>
     <sound>sound\snd_red_king</sound>
+    <sound>sound\snd_lever_door</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Background">

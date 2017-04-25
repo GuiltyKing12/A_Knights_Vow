@@ -56,6 +56,7 @@ if(!pulled) {
             if(abs(obj_knight.x - x) &lt; sprite_get_width(obj_knight.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
                 show_debug_message("knight: " + string(obj_knight.x) + " obj: " + string(x));
                 pulled = true;
+                audio_play_sound(snd_lever_door, 9, false);
                 image_index = 1;
                 with(obj_door_2) {
                     instance_destroy();
