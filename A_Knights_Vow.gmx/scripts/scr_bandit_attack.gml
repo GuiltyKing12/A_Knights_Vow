@@ -1,7 +1,7 @@
 hit = false;
-
+offset = 20;
 if(abs(obj_knight.y - y) < 32) {
-    if(abs(obj_knight.x - x) < 20) {
+    if(abs(obj_knight.x - x) < sprite_get_width(obj_knight.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset) {
         hit = true;
     }
 }

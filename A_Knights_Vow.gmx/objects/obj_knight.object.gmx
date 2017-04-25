@@ -299,7 +299,7 @@ with(other) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
+            <string>if(!invincible &amp;&amp; !defending) {
     with(other) {
             if(attack) {
             other.hitpoints--;
@@ -339,7 +339,7 @@ if(defending){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
+            <string>if(!invincible &amp;&amp; !defending) {
     with(other) {
             if(attack) {
             other.hitpoints--;

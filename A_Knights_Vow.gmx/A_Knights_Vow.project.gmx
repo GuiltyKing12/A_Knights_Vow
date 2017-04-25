@@ -112,6 +112,8 @@
     <script>scripts\scr_knight_attack.gml</script>
     <script>scripts\scr_get_heart.gml</script>
     <script>scripts\scr_bandit_attack.gml</script>
+    <script>scripts\scr_holy_slash.gml</script>
+    <script>scripts\scr_knight_attack_on_eye.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Background">

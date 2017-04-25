@@ -31,7 +31,7 @@ move_speed = 1;
 hitpoints = 100;
 portal = true;
 alarm[0] = 10 * room_speed;
-attack1 = true;
+attack1 = false;
 attack2 = true
 alarm[2] = 15 * room_speed;
 invincible = false;
@@ -140,7 +140,7 @@ if(!attack1) {
 
 if(obj_knight.attacking &amp;&amp; !invincible) {
     scr_knight_attack();
-    //invincible = true;
+    invincible = true;
     alarm[3] = 3 * room_speed;
 }
 </string>

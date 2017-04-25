@@ -238,7 +238,7 @@ if(obj_knight.attacking &amp;&amp; !invincible) {
     scr_knight_attack();
     invincible = true;
     alarm[3] = 3 * room_speed;
-    if(random(10) &lt; 1) {
+    if(random(10) &lt; 3) {
         if(hit &amp;&amp; obj_knight.x &lt; x) x += 200;
         else if(hit &amp;&amp; obj_knight.x &gt; x) x -= 200;
         

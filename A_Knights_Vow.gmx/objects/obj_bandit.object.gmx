@@ -177,11 +177,12 @@ else{
 }
 }
 
-if(abs(obj_knight.x - x) &lt; 32 &amp;&amp; !attack) {
+if(abs(obj_knight.x - x) &lt; sprite_get_width(obj_knight.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - 20
+        &amp;&amp; !attack) {
     attack = true;
-    scr_bandit_attack();
     image_speed = .2;
     sprite_index = spr_bandit_attack;
+    scr_bandit_attack();
     audio_play_sound(snd_bandit_attack, 9, false);
     alarm[2] = .2 * room_speed;
 }

@@ -25,7 +25,7 @@ if(abs(obj_knight.y - y) < 32) {
 
 if(hit) {
     with(obj_knight) {
-        if(!invincible && !defending && !attacking) {
+        if(!invincible && !defending) {
         with(other) {
                 if(attack) {
                 other.hitpoints--;
