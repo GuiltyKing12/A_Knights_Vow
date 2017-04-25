@@ -199,7 +199,7 @@ alarm[3] = .5 * room_speed;
           <argument>
             <kind>1</kind>
             <string>if(hitpoints == 0) {
-    audio_play_sound(snd_tentacle, 9, false);
+    audio_play_sound(snd_tentacle_monster, 9, false);
     instance_destroy();
 }
 
@@ -277,7 +277,7 @@ else {
     
     if(scream){
         scream = false;
-        audio_play_sound(snd_tentacle, 9, false);
+        audio_play_sound(snd_tentacle_monster, 9, false);
         alarm[0] = 10 * room_speed;
     }
 }
