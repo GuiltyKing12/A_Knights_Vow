@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_fixed_rotation = true
+            <string>phy_fixed_rotation = true;
 scream = true;
-move_speed = 100
-max_x_speed = 4
+move_speed = 100;
+max_x_speed = 4;
 hitpoints = 5;
 invincible = false;
 </string>
