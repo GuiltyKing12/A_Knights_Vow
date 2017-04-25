@@ -603,6 +603,7 @@ for(k = 0; k &lt; energybar; k++) {
           <argument>
             <kind>1</kind>
             <string>if(!attacking &amp;&amp; !defending &amp;&amp; holyenergy &gt;= 100) {
+global.holy_slash = true;
 holyenergy = 0;
 knightslash = instance_create(x, y, obj_holy_slash);
 audio_play_sound(snd_holy_sword, 9, false);

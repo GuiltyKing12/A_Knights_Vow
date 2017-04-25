@@ -199,6 +199,14 @@ if(scream){
     alarm[0] = 10 * room_speed;
 }
 
+if(global.holy_slash) {
+    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 2) {
+        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
+            instance_destroy();
+        }
+    }
+}
+
 if(obj_knight.attacking) {
     scr_knight_attack();
 }

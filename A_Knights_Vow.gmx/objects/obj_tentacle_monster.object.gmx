@@ -35,6 +35,7 @@ attack = false;
 canattack = true;
 fired = false;
 right = false;
+seen = false;
 </string>
           </argument>
         </arguments>
@@ -210,7 +211,10 @@ with(obj_holy_slash) {
 phy_speed_x = max(min(phy_speed_x, max_x_speed), -max_x_speed)
 image_speed = phy_speed_x /10;
 
-if(!fired) {
+if(abs(obj_knight.x - x) &lt; 300 &amp;&amp; abs(obj_knight.y - y) &lt; sprite_get_height(sprite_index) * 2) seen = true;
+else seen = false;
+
+if(!fired &amp;&amp; abs(obj_knight.x - x) &lt; 200 &amp;&amp; abs(obj_knight.y - y) &lt; sprite_get_height(sprite_index) / 2 &amp;&amp; seen) {
     sprite_index = spr_tentacle_stand;
     dir = 0;
     if(obj_knight.x &lt; x) {
@@ -228,7 +232,7 @@ if(!fired) {
     alarm[4] = 5 * room_speed;
 }
 else {
-    if(!attack) {
+    if(!attack &amp;&amp; seen) {
         if(obj_knight.x &lt; x) {
             image_xscale = 1;
             image_speed = .2;
@@ -251,8 +255,17 @@ else {
           physics_apply_force(x,y, move_speed, 0);
         }
     }
+    else if(!seen) {
+        sprite_index = spr_tentacle_stand;
+        if(random(10) &lt; 5) {
+            physics_apply_force(x, y, move_speed * 10, 1);
+        }
+        else {
+            physics_apply_force(x, y, -move_speed * 10, 1);
+        }
+    }
     
-    if(abs(obj_knight.x - x) &lt; 128 &amp;&amp; canattack) {
+    if(abs(obj_knight.x - x) &lt; 128 &amp;&amp; canattack &amp;&amp; abs(obj_knight.y - y) &lt; sprite_get_height(sprite_index) / 2) {
         attack = true;
         canattack = false;
         image_speed = .2;

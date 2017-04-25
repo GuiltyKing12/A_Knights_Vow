@@ -24,4 +24,6 @@ global.choice_2_chose = 0;
 global.knight_hitpoints = 5;
 global.knight_holyenergy = 0;
 
+global.holy_slash = false;
+
 randomize();

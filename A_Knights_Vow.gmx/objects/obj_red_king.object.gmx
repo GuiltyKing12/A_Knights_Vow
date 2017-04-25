@@ -224,7 +224,7 @@ else if(obj_knight.x - 100 &gt; x) {
     x += move_speed * .5
 }
 
-if(obj_knight.y - 200&gt; y ) {
+if(obj_knight.y - 200 &gt; y ) {
     y += move_speed * .5
 }
 else if(obj_knight.y + 200&lt; y) {
@@ -263,12 +263,24 @@ if(!attack1) {
 
 if(!attack2) {
     for(i = 0; i &lt; 200; i+= 40) {
-        instance_create(x + i, y - i, obj_dark_sword);
-        instance_create(x - i, y - i, obj_dark_sword);
+        instance_create(obj_knight.x + i, y - i, obj_dark_sword);
+        instance_create(obj_knight.x - i, y - i, obj_dark_sword);
     }
     attack2 = true;
     alarm[2] = 25 * room_speed;
 }
+
+if(global.holy_slash) {
+    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 2) {
+        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
+            hitpoints -= 10;
+            with(obj_holy_slash) {
+                instance_destroy();
+            }
+        }
+    }
+}
+
 
 if(obj_knight.attacking &amp;&amp; !invincible) {
     scr_knight_attack();
