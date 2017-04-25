@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = .2;
-left = true;
 move_speed = 1;
 hitpoints = 100;
 eye = true;
@@ -153,6 +152,17 @@ invincible = false;
     instance_destroy();
 }
 
+if(obj_knight.x &lt; x) {
+    image_xscale = -1;
+    image_yscale= -1;
+}
+else {
+    image_yscale = 1;
+}
+
+image_angle = point_direction(x, y, obj_knight.x - sprite_get_width(obj_knight.sprite_index) / 2, 
+                                obj_knight.y - sprite_get_height(obj_knight.sprite_index) / 2);
+                                
 
 if(!eye) {
     for(i = 0; i &lt; 360; i+=30) {

@@ -166,7 +166,9 @@
       <object>objects\obj_eye_of_agora</object>
       <object>objects\obj_phantom_eye</object>
       <object>objects\obj_door</object>
+      <object>objects\obj_door_2</object>
       <object>objects\obj_door_lever</object>
+      <object>objects\obj_door_level_2</object>
     </objects>
   </objects>
   <rooms name="rooms">
