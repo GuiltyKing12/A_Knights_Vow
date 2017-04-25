@@ -76,6 +76,11 @@
       <sprites name="EyeOfAgora">
         <sprite>sprites\spr_eye_of_agora</sprite>
         <sprite>sprites\spr_death_ball</sprite>
+        <sprite>sprites\spr_phantom_eye</sprite>
+      </sprites>
+      <sprites name="obstacles">
+        <sprite>sprites\spr_door</sprite>
+        <sprite>sprites\spr_door_opener</sprite>
       </sprites>
     </sprites>
     <sprites name="System">
@@ -159,6 +164,9 @@
       <object>objects\obj_dark_ball</object>
       <object>objects\obj_dark_sword</object>
       <object>objects\obj_eye_of_agora</object>
+      <object>objects\obj_phantom_eye</object>
+      <object>objects\obj_door</object>
+      <object>objects\obj_door_lever</object>
     </objects>
   </objects>
   <rooms name="rooms">

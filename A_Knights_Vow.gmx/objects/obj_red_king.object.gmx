@@ -29,7 +29,7 @@
 right = true;
 move_speed = 10;
 float_pos = 0;
-hitpoints = 100;
+hitpoints = 30;
 portal = true;
 alarm[0] = 10 * room_speed;
 attack1 = false;
@@ -177,6 +177,12 @@ invincible = false
     instance_destroy();
 }
 
+if(hitpoints &lt; 15) {
+    if(random(10) &gt; 8) {
+        obj_knight.x  = random(room_width);
+    }
+}
+
 if(obj_knight.x &lt; x) {
     right = true;
     image_xscale = 1;
@@ -237,16 +243,17 @@ if(!attack2) {
 if(obj_knight.attacking &amp;&amp; !invincible) {
     scr_knight_attack();
     invincible = true;
-    alarm[3] = 3 * room_speed;
+    alarm[3] = 1 * room_speed;
     if(random(10) &lt; 3) {
-        if(hit &amp;&amp; obj_knight.x &lt; x) x += 200;
-        else if(hit &amp;&amp; obj_knight.x &gt; x) x -= 200;
+        if(hit &amp;&amp; obj_knight.x &lt; x) x += 300;
+        else if(hit &amp;&amp; obj_knight.x &gt; x) x -= 300;
         
-        if(random(10) &lt; .1) {
+        if(random(10) &lt; 1) {
             attack1 = false;
         }
     }
 }
+
 </string>
           </argument>
         </arguments>

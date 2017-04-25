@@ -52,9 +52,10 @@ magnitude = 10;
             <string>x += magnitude*cos(angle);
 y += magnitude*sin(angle);
 
-if(abs(obj_knight.x - x) &lt; 16 &amp;&amp; abs(obj_knight.y - y) &lt; 16) {
+if(abs(obj_knight.x - x) &lt; sprite_get_width(obj_knight.sprite_index) / 2+ sprite_get_width(sprite_index) / 2
+         &amp;&amp; abs(obj_knight.y - y) &lt; sprite_get_height(obj_knight.sprite_index) / 2+ sprite_get_width(sprite_index) / 2) {
     with(obj_knight) {
-        if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
+        if(!invincible &amp;&amp; !defending) {
         hitpoints--;
         invincible = true;
         alarm[2] = 1 * room_speed;

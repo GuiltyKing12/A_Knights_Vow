@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(abs(obj_knight.x - x) &lt; 16 &amp;&amp; abs(obj_knight.y - y) &lt; 16) scr_get_heart();
+            <string>if(abs(obj_knight.x - x) &lt; sprite_get_width(obj_knight.sprite_index) / 2+ sprite_get_width(sprite_index) / 2
+    &amp;&amp; abs(obj_knight.y - y) &lt; sprite_get_height(obj_knight.sprite_index) / 2+ sprite_get_width(sprite_index) / 2) {
+             scr_get_heart();
+}
 </string>
           </argument>
         </arguments>

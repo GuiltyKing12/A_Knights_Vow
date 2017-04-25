@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_fixed_rotation = true
+            <string>//phy_fixed_rotation = true
 scream = true;
 move_speed = 100
 max_x_speed = 4
@@ -156,47 +156,38 @@ with(obj_holy_slash) {
     if(x == other.x) instance_destroy();
 }
 
-//Stuff
-//phy_speed_x = max(min(phy_speed_x, max_x_speed), -max_x_speed)
-//image_speed = phy_speed_x /10;
-
 if(!attack) {
     if(obj_knight.x &lt; x){
       //right
       image_xscale = -1;
-      //sprite_index = spr_bandit_move;
-      //image_speed = .2;
-      //physics_apply_force(x,y, -move_speed, 0)
     }
     else{
       //left
       image_xscale = 1;
-      //sprite_index = spr_bandit_move;
-      //image_speed = .2;
-      //physics_apply_force(x,y, move_speed, 0)
     }
 }
 
 if(!attack) {
+    dir = point_direction(x, y, obj_knight.x, obj_knight.y);
     if(obj_knight.x &lt; x) {
         attack = true;
-        //image_speed = .2;
-        //sprite_index = spr_bandit_attack;
         audio_play_sound(snd_bandit_attack, 9, false);
-        bolt = instance_create(x-50, y, obj_bolt);
+        bolt = instance_create(x, y, obj_bolt);
         with(bolt) {
             movespeed = -1;
+            phy_bullet = true;
+            physics_apply_impulse(x,y,lengthdir_x(50, other.dir),lengthdir_y(50, other.dir))
         }
         alarm[2] = 4 * room_speed;
     }
     else {
         attack = true;
-        //image_speed = .2;
-        //sprite_index = spr_bandit_attack;
         audio_play_sound(snd_bandit_attack, 9, false);
-        bolt = instance_create(x+50, y, obj_bolt);
+        bolt = instance_create(x, y, obj_bolt);
         with(bolt) {
             movespeed = 1;
+            phy_bullet = true;
+            physics_apply_impulse(x,y,lengthdir_x(50, other.dir),lengthdir_y(50, other.dir))
         }
         alarm[2] = 4 * room_speed;
     }
@@ -285,7 +276,7 @@ if(obj_knight.attacking) {
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>1</PhysicsObjectDensity>
@@ -296,10 +287,5 @@ if(obj_knight.attacking) {
   <PhysicsObjectFriction>0.5</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>24,4</point>
-    <point>48,4</point>
-    <point>48,60</point>
-    <point>24,60</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>
