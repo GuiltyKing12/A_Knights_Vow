@@ -120,6 +120,7 @@
     <background>background\background_ending_three</background>
     <background>background\background_prologue_3</background>
     <background>background\background_red_king_death</background>
+    <background>background\background_ending_one</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
