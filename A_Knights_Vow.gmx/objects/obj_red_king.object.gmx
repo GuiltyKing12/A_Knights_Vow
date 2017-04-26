@@ -37,6 +37,8 @@ attack2 = true;
 alarm[2] = 15 * room_speed;
 invincible = false;
 laugh = true;
+attack3 = true;
+alarm[5] = 5 * room_speed;
 </string>
           </argument>
         </arguments>
@@ -59,7 +61,36 @@ laugh = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>instance_create(x, y, obj_king_death);
+with(obj_portal) {
+    instance_destroy();
+}
+with(obj_tentacle_monster) {
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attack3 = false;
 </string>
           </argument>
         </arguments>
@@ -197,13 +228,13 @@ laugh = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hitpoints == 0) {
+            <string>if(hitpoints &lt; 0) {
     audio_play_sound(snd_red_king, 9, false);
     instance_destroy();
 }
 
 if(hitpoints &lt; 15) {
-    if(random(10) &gt; 8) {
+    if(random(10) &gt; 6) {
         obj_knight.x  = random(room_width);
     }
 }
@@ -217,10 +248,19 @@ else {
     right = false;
 }
 
-if(obj_knight.x + 100 &lt; x) {
+if(random(10) &gt; 8) {
+    if(obj_knight.x + 100 &gt; x) {
+        x += move_speed * .5;
+    }
+    else if(obj_knight.x - 100 &lt; x) {
+        x -= move_speed * .5;
+    }
+}
+
+if(obj_knight.x + 200 &lt; x) {
     x -= move_speed * .5
 }
-else if(obj_knight.x - 100 &gt; x) {   
+else if(obj_knight.x - 200 &gt; x) {   
     x += move_speed * .5
 }
 
@@ -232,11 +272,11 @@ else if(obj_knight.y + 200&lt; y) {
 }
 
 
-if(random(100) &lt; 50) y += .5;
-else y -= .5;
+if(random(100) &lt; 50) y += 1;
+else y -= 1;
 
-if(random(100) &lt; 30) x += move_speed * .1;
-else x -= move_speed * .1;
+if(random(100) &lt; 30) x += move_speed * .01;
+else x -= move_speed * .01;
 
 if(laugh){
     laugh = false;
@@ -268,6 +308,12 @@ if(!attack2) {
     }
     attack2 = true;
     alarm[2] = 25 * room_speed;
+}
+
+if(!attack3) {
+    instance_create(x, y, obj_dark_ball2)
+    attack3 = true;
+    alarm[5] = 1 * room_speed;
 }
 
 if(global.holy_slash) {
@@ -320,6 +366,29 @@ if(obj_knight.attacking &amp;&amp; !invincible) {
             <kind>1</kind>
             <string>if(x &gt; room_width) x = room_width - 200;
 if(x &lt; 0) x = 200;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="49">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hitpoints = 1
 </string>
           </argument>
         </arguments>

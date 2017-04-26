@@ -31,9 +31,14 @@
        mouse_y &gt;= y - (sprite_height / 2) &amp;&amp;
        mouse_y &lt;= y + (sprite_height / 2)) {
         
-        global.knight_hitpoints = 5;
-        global.knight_holyenergy = 0;
-        room_goto(rm_prologue);   
+       global.knight_hitpoints = 5;
+       global.knight_holyenergy = 0;
+       if(room == rm_main_menu) {
+            room_goto(rm_prologue);   
+        }
+        else {
+            room_goto(global.last_level);
+        }
     }
 }
 </string>

@@ -29,7 +29,7 @@
 scream = true;
 move_speed = 100
 max_x_speed = 4
-hitpoints = 5;
+hitpoints = 1;
 invincible = false;
 attack = false;
 </string>
@@ -199,11 +199,24 @@ if(scream){
     alarm[0] = 10 * room_speed;
 }
 
+offset = 20;
+
 if(global.holy_slash) {
     if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 2) {
         if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
             instance_destroy();
         }
+    }
+}
+
+if(global.arrow &gt; 0) {
+    for(i = 0; i &lt; instance_number(obj_knight_bolt); i++) {
+    bolt = instance_find(obj_knight_bolt, i);
+    if(abs(bolt.y - y ) &lt; sprite_get_height(sprite_index)) {
+        if(abs(bolt.x - x) &lt; sprite_get_width(bolt.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
+            hitpoints--
+        }
+    }
     }
 }
 

@@ -47,6 +47,7 @@ defending = false;
 hitpoints = global.knight_hitpoints;
 holyenergy = global.knight_holyenergy;
 invincible = false;
+global.last_level = room;
 </string>
           </argument>
         </arguments>
@@ -220,7 +221,7 @@ combo = 0;
 }
 else */
 
-if(hitpoints == 0) {
+if(hitpoints &lt; 1) {
     audio_play_sound(snd_knight_death, 9, false);
     sprite_index = spr_knight_dead;
     instance_deactivate_all(true);
@@ -294,7 +295,7 @@ if(!attacking &amp;&amp; !defending) {
             <string>if(!defending &amp;&amp; !invincible) {
         hitpoints--;
         invincible = true;
-        alarm[2] = 1 * room_speed;
+        alarm[2] = 3 * room_speed;
 }
 with(other) {
     instance_destroy();
@@ -326,7 +327,7 @@ with(other) {
             if(attack) {
             other.hitpoints--;
             other.invincible = true;
-            other.alarm[2] = 1 * room_speed;
+            other.alarm[2] = 3 * room_speed;
         }
     }
 }
@@ -366,7 +367,7 @@ if(defending){
             if(attack) {
             other.hitpoints--;
             other.invincible = true;
-            other.alarm[2] = 1 * room_speed;
+            other.alarm[2] = 3 * room_speed;
         }
     }
 }
@@ -404,7 +405,7 @@ if(defending){
             <string>if(!invincible &amp;&amp; !defending &amp;&amp; !attacking) {
     hitpoints--;
     invincible = true;
-    alarm[2] = 1 * room_speed;
+    alarm[2] = 3 * room_speed;
     
     with(other){
       if(sprite_index == spr_boar_right){
@@ -679,6 +680,7 @@ with(knightslash) {
     fired = true;
     alarm[3] = 1 * room_speed;
     alarm[4] = 2 * room_speed;
+    global.arrow++;
 }
 </string>
           </argument>

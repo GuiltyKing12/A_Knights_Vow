@@ -18,12 +18,16 @@ global.choice2[0] = "The king stares back at you... his eyes are cold... What sh
 global.choice2[1] = "Kill the king."
 global.choice2[2] = "Spare the king."
 
+global.king_death[0] = "You have slain the king... Laying there on the ground he waits for death. "
+global.king_death[1] = "In your head you hear a voice telling you do not kill him... Remember why you are here"
+
 global.choice_1_chose = 0;
 global.choice_2_chose = 0;
 
 global.knight_hitpoints = 5;
 global.knight_holyenergy = 0;
-
+global.last_level = rm_prologue;
+global.arrow = 0;
 global.holy_slash = false;
 
 randomize();

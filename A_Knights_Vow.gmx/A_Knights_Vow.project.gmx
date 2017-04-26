@@ -76,11 +76,14 @@
         <sprite>sprites\spr_portal</sprite>
         <sprite>sprites\spr_dark_ball</sprite>
         <sprite>sprites\spr_dark_sword</sprite>
+        <sprite>sprites\spr_red_king_death</sprite>
       </sprites>
       <sprites name="EyeOfAgora">
         <sprite>sprites\spr_eye_of_agora</sprite>
         <sprite>sprites\spr_death_ball</sprite>
         <sprite>sprites\spr_phantom_eye</sprite>
+        <sprite>sprites\spr_shock_strike</sprite>
+        <sprite>sprites\spr_eye_death</sprite>
       </sprites>
       <sprites name="obstacles">
         <sprite>sprites\spr_door</sprite>
@@ -174,6 +177,9 @@
       <object>objects\obj_door_lever</object>
       <object>objects\obj_door_level_2</object>
       <object>objects\obj_spawner</object>
+      <object>objects\obj_king_death</object>
+      <object>objects\obj_shock_blast</object>
+      <object>objects\obj_eye_death</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -191,9 +197,9 @@
     <room>rooms\rm_level3_1</room>
     <room>rooms\rm_level3_2</room>
     <room>rooms\rm_level3_3</room>
+    <room>rooms\rm_level_3_end</room>
     <room>rooms\rm_level_3_epilogue</room>
     <room>rooms\rm_level_final</room>
-    <room>rooms\rm_end</room>
     <room>rooms\rm_ending_1</room>
     <room>rooms\rm_ending_2</room>
     <room>rooms\rm_ending_3</room>

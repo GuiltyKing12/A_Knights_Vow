@@ -61,7 +61,16 @@ angle = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_ending_3);
+            <string>instance_create(x, y, obj_eye_death);
+with(obj_portal) {
+    instance_destroy();
+}
+with(obj_dark_ball2) {
+    instance_destroy();
+}
+with(obj_tentacle_monster) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -248,8 +257,8 @@ if(!attack1) {
 }
 
 if(global.holy_slash) {
-    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 2) {
-        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 2 - offset){
+    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 3) {
+        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 3 - offset){
             hitpoints -= 10;
             with(obj_holy_slash) {
                 instance_destroy();
@@ -263,6 +272,29 @@ if(obj_knight.attacking &amp;&amp; !invincible) {
     invincible = true;
     alarm[3] = 1 * room_speed;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="49">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hitpoints = 1;
 </string>
           </argument>
         </arguments>

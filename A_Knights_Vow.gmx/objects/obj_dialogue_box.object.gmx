@@ -43,6 +43,11 @@ else if(room = rm_level_three_prologue) {
         dialogue[i] = global.level3[i];
     }
 }
+else if(room = rm_level_3_end) {
+    for(i = array_length_1d(global.king_death) - 1; i &gt; -1; i--) {
+        dialogue[i] = global.king_death[i];
+    }
+}
 </string>
           </argument>
         </arguments>

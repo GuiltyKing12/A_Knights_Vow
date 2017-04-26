@@ -30,7 +30,7 @@ if(hit) {
                 if(attack) {
                 other.hitpoints--;
                 other.invincible = true;
-                other.alarm[2] = 1 * room_speed;
+                other.alarm[2] = 3 * room_speed;
             }
     }
 }

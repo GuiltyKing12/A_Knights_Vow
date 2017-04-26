@@ -76,7 +76,7 @@ phy_fixed_rotation = true;
     if(!defending &amp;&amp; !invincible) {
         hitpoints--;
         invincible = true;
-        alarm[2] = 1 * room_speed;
+        alarm[2] = 3 * room_speed;
     }
 }
 
