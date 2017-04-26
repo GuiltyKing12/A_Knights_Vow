@@ -24,7 +24,7 @@ global.ending2[1] = "The world is enveloped in light and from it a woman appears
 global.ending2[2] = "She looks at you reaching for your helemt and slowlys removes it."
 global.ending2[3] = "She smiles and whispers 'Welcome Back'"
 
-global.ending3[0] = "The Knight plunges his sword deep through the demon's eye. It expands and contrasts repeatedly until finally it explodes in a bright light. When the knights vision comes back he is standing next to the King. The King removes his crown and hands it to the Knight: 'This belongs to you my lord.'"
+global.ending3[0] = "The Knight plunges his sword deep through the demon's eye. It expands and contrasts repeatedly until finally it explodes in a bright light. When the knights vision comes back he is standing next to the body of the dead King. The Knight removes the King's bloodied crown and places it on as he ascends the throne."
 global.ending3[1] = "The Knight, know the king, ascends to his throne. He gazes across the land with a sense of accomplishment. The Knight has fullfiled his vow."
 
 // decisions
