@@ -116,6 +116,8 @@
     <background>background\background_castle</background>
     <background>background\background_prologue_two</background>
     <background>background\background_the_end</background>
+    <background>background\background_prologue_3</background>
+    <background>background\background_red_king_death</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
