@@ -109,6 +109,7 @@
     <background>background\background_1</background>
     <background>background\bg_dirt</background>
     <background>background\background_guide</background>
+    <background>background\background_ending_two</background>
     <background>background\background_end</background>
     <background>background\background_gameover</background>
     <background>background\background_prologue</background>
@@ -116,6 +117,7 @@
     <background>background\background_castle</background>
     <background>background\background_prologue_two</background>
     <background>background\background_the_end</background>
+    <background>background\background_ending_three</background>
     <background>background\background_prologue_3</background>
     <background>background\background_red_king_death</background>
   </backgrounds>
