@@ -77,7 +77,7 @@ image_speed = .5;
     with(obj_knight) {
         hitpoints -= 2;
         invincible = true;
-        other.alarm[2] = 1 * room_speed;
+        other.alarm[2] = 3 * room_speed;
     }    
 }
 </string>

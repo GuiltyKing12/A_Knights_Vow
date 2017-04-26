@@ -236,6 +236,7 @@ if(!eye) {
     for(i = 0; i &lt; 360; i+=30) {
        if(random(10) &lt; 5) {
         instance_create(obj_knight.x + random_range(3,5)*obj_knight.sprite_width/2*cos(degtorad(i)), obj_knight.y + random_range(3,5)*obj_knight.sprite_width/2*sin(degtorad(i)), obj_phantom_eye)
+        image_angle = random_range(0, 360);
        }
     }
     eye = true;
@@ -249,7 +250,9 @@ if(roar){
 }
 
 if(!attack1) {
-    for(i = 0; i &lt; 360; i+=30) {
+    if(hitpoints &lt; 30) spread = 10;
+    else spread = 30;
+    for(i = 0; i &lt; 360; i+=spread) {
        instance_create(x + sprite_width/2*cos(degtorad(i)), y + sprite_width/2*sin(degtorad(i)), obj_dark_ball2)
     }
     attack1 = true;
@@ -257,8 +260,8 @@ if(!attack1) {
 }
 
 if(global.holy_slash) {
-    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 3) {
-        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 3 - offset){
+    if(abs(obj_holy_slash.y - y ) &lt; sprite_get_height(obj_holy_slash.sprite_index) / 2 + sprite_get_height(sprite_index) / 4) {
+        if(abs(obj_holy_slash.x - x) &lt; sprite_get_width(obj_holy_slash.sprite_index) / 2 + sprite_get_width(sprite_index) / 4 - offset){
             hitpoints -= 10;
             with(obj_holy_slash) {
                 instance_destroy();

@@ -63,6 +63,11 @@ else if(room = rm_ending_3) {
         dialogue[i] = global.ending3[i];
     }
 }
+else if(room = rm_lord_of_purgatory) {
+    for(i = array_length_1d(global.purgatory) - 1; i &gt; -1; i--) {
+        dialogue[i] = global.purgatory[i];
+    }
+}
 </string>
           </argument>
         </arguments>

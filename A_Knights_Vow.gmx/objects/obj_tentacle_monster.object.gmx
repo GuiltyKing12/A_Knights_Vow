@@ -33,7 +33,8 @@ hitpoints = 5;
 invincible = false;
 attack = false;
 canattack = true;
-fired = false;
+fired = true;
+alarm[4] = random_range(5, 10);
 right = false;
 seen = false;
 </string>
