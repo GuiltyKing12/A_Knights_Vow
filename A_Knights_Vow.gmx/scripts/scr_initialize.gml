@@ -25,7 +25,7 @@ global.ending2[2] = "She looks at you reaching for your helemt and slowlys remov
 global.ending2[3] = "She smiles and whispers 'Welcome Back'"
 
 global.ending3[0] = "The Knight plunges his sword deep through the demon's eye. It expands and contrasts repeatedly until finally it explodes in a bright light. When the knights vision comes back he is standing next to the body of the dead King. The Knight removes the King's bloodied crown and places it on as he ascends the throne."
-global.ending3[1] = "The Knight, know the king, ascends to his throne. He gazes across the land with a sense of accomplishment. The Knight has fullfiled his vow."
+global.ending3[1] = "The Knight, know the king, gazes through his staind windows. The fire from the burning villages grows and intensifies; but the king does not look worried. He simple stares and thinks to himself: 'The kingdom is finally mine, ALL MINE.'"
 
 // decisions
 global.choice1[0] = "The bandit lord lays at your feet... What should you do with him?"
